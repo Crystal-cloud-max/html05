@@ -1,0 +1,127 @@
+﻿@charset "utf-8";
+
+/*All Devices*/
+@media only screen
+{
+    body{
+        background-image:url(jb_back3.png);
+        background-position:center;
+        background-attachment:fixed;
+        background-repeat:no-repeat;
+        background-size:cover;
+        color:white;
+        font-family:Arial,sans-serif;
+    }
+    header img#header{
+        width:100%;
+        max-width:1024px;
+    }
+    /*Navigation Bar*/
+    header{
+        text-align:center;
+    }
+    header nav > ul{
+        display:flex;
+        flex-wrap:nowrap;
+        margin-top:2rem;
+        margin-bottom:2rem;
+    }
+    header nav * {
+        text-decoration: none;
+        background-color: #333;
+        color:white;
+    }
+    header nav ul{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+    }
+    article{
+        margin-left:1em;
+        margin-right:1em;
+    }
+    aside{
+        text-align:center;
+    }
+    aside h1{
+        font-size:1.5em;
+        margin-bottom:8px;
+    }
+    aside h2{
+        font-size:1em;
+    }
+    address{
+        font:normal;
+    }
+    address a{
+        text-decoration:none;
+        color:white;
+    }
+}
+/*Mobile Devices*/
+@media only screen and (max-width:480px)
+{
+    /*Navigation Bar*/
+    header nav, header img#header{
+        display:none;
+    }
+    header nav > ul{
+        flex-direction:column;
+    }
+    header span{
+        display:inline-block;
+        width:100%;
+        text-align:left;
+        background-color:rgba(0,0,0,.5);
+    }
+    header nav.topnav{
+        display:none;
+    }
+    header nav.topnav ul.visible{
+        display:block;
+    }
+    header ul.dropdown{
+        font-size:.75em;
+    }
+    /*Sides*/
+    aside.right{
+        display:none;
+    }
+    aside address a {
+        background-color: rgba(0,0,0,.5);
+        line-height:24px;
+        padding:8px;
+        border-radius:80px;
+    }
+}
+@media only screen and (min-width:481px)
+{
+    header span{
+        display:none;
+    }
+    header nav > ul{
+        flex-direction:row;
+        justify-content:space-around;
+    }
+    header nav{
+        position:relative;
+    }
+    header nav ul.dropdown{
+        display:none;
+    }
+    header nav ul li:hover{
+        background-color:black;
+    }
+    header nav li a {
+        background-color:transparent;
+    }
+    div.main{
+        display:flex;
+    }
+    aside{
+        flex-basis:25em;
+    }
+    aside.right{
+        order:3;
+    }
+}
